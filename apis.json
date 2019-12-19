@@ -1,0 +1,103 @@
+{
+    "name": "FreeAgent",
+    "description": "FreeAgent's online accounting software brings everything together, from invoices and expenses to VAT, payroll and tax return filing. Start a free trial today!",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/407-freeagent.jpg",
+    "tags": [
+        "accounting",
+        "api provider",
+        "crm",
+        "financial services",
+        "have api"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/freeagent\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "FreeAgent",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/407-freeagent.jpg",
+            "humanURL": "http:\/\/www.freeagent.com\/",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/freeagent-openapi.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/freeagent-postman-collection.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Blog",
+            "url": "http:\/\/www.freeagent.com\/central"
+        },
+        {
+            "type": "Blog RSS",
+            "url": "http:\/\/www.freeagent.com\/central\/feed.rss"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/freeagent-central"
+        },
+        {
+            "type": "Developers",
+            "url": "https:\/\/dev.freeagent.com\/"
+        },
+        {
+            "type": "Email",
+            "url": "support@freeagent.com"
+        },
+        {
+            "type": "Email",
+            "url": "accountants@freeagent.com"
+        },
+        {
+            "type": "Email",
+            "url": "hello@freeagent.com"
+        },
+        {
+            "type": "Email",
+            "url": "press@freeagent.com"
+        },
+        {
+            "type": "Email",
+            "url": "partners@freeagent.com"
+        },
+        {
+            "type": "Email",
+            "url": "info@freeagent.com"
+        },
+        {
+            "type": "Email",
+            "url": "yourData@freeagent.com"
+        },
+        {
+            "type": "Github",
+            "url": "https:\/\/github.com\/FreeAgent"
+        },
+        {
+            "type": "Partners",
+            "url": "http:\/\/www.freeagent.com\/partners\/"
+        },
+        {
+            "type": "Pricing",
+            "url": "http:\/\/www.freeagent.com\/pricing\/"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/freeagent"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/www.freeagent.com\/"
+        }
+    ]
+}
