@@ -1,0 +1,77 @@
+aid: freeagent
+name: FreeAgent
+description: >-
+  FreeAgent is UK-focused cloud accounting software for small businesses,
+  freelancers, and accountants, providing invoicing, expense tracking, time
+  tracking, project management, banking, payroll, and Self Assessment / VAT
+  filing through HMRC's Making Tax Digital. The FreeAgent API is a RESTful
+  service that exposes contacts, invoices, estimates, expenses, bills,
+  timeslips, projects, bank accounts, bank transactions, transaction
+  explanations, and tax timeline events for company accounts and accountancy
+  practices. Authentication uses OAuth 2.0 (authorization code flow) and
+  responses are available in JSON or XML.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Accounting
+  - Small Business
+  - Invoicing
+  - Bookkeeping
+  - Expenses
+  - Payroll
+  - VAT
+  - HMRC
+  - Making Tax Digital
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/freeagent/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: freeagent:rest-api
+    name: FreeAgent REST API
+    description: >-
+      RESTful API for the FreeAgent cloud accounting platform. Provides full
+      access to invoices, estimates, contacts, bills, expenses, projects,
+      timeslips, bank accounts, transactions, and accountancy-practice
+      resources. Authentication is OAuth 2.0 authorization code flow; a
+      sandbox is available at api.sandbox.freeagent.com.
+    humanURL: https://dev.freeagent.com/docs
+    baseURL: https://api.freeagent.com/v2
+    tags:
+      - Accounting
+      - Invoicing
+      - Bookkeeping
+      - Expenses
+      - Bank Feeds
+      - OAuth 2.0
+    properties:
+      - type: Documentation
+        url: https://dev.freeagent.com/docs
+      - type: Authentication
+        url: https://dev.freeagent.com/docs/oauth
+      - type: Getting Started
+        url: https://dev.freeagent.com/docs/quick_start
+      - type: Sandbox
+        url: https://api.sandbox.freeagent.com
+      - type: Postman Collection
+        url: https://github.com/fac/postman-freeagent-api-collection
+
+common:
+  - type: Website
+    url: https://www.freeagent.com
+  - type: Documentation
+    url: https://dev.freeagent.com/docs
+  - type: Developer Portal
+    url: https://dev.freeagent.com
+  - type: Pricing
+    url: https://www.freeagent.com/pricing/
+  - type: Sign Up
+    url: https://signup.freeagent.com/
+  - type: Support
+    url: https://support.freeagent.com
+  - type: Status
+    url: https://status.freeagent.com
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
