@@ -50,7 +50,7 @@ apis:
         url: https://dev.freeagent.com/docs
       - type: Authentication
         url: https://dev.freeagent.com/docs/oauth
-      - type: Getting Started
+      - type: GettingStarted
         url: https://dev.freeagent.com/docs/quick_start
       - type: Sandbox
         url: https://api.sandbox.freeagent.com
@@ -66,11 +66,11 @@ common:
     url: https://dev.freeagent.com
   - type: Pricing
     url: https://www.freeagent.com/pricing/
-  - type: Sign Up
+  - type: SignUp
     url: https://signup.freeagent.com/
   - type: Support
     url: https://support.freeagent.com
-  - type: Status
+  - type: StatusPage
     url: https://status.freeagent.com
 maintainers:
   - FN: Kin Lane
