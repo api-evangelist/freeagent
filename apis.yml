@@ -58,6 +58,8 @@ apis:
         url: https://github.com/fac/postman-freeagent-api-collection
 
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/freeagent
   - type: Website
     url: https://www.freeagent.com
   - type: Documentation
