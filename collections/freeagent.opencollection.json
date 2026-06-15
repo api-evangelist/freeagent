@@ -1,0 +1,482 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "FreeAgent API",
+    "version": "2"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://api.freeagent.com/v2/approve_app",
+      "accessTokenUrl": "https://api.freeagent.com/v2/token_endpoint",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Contacts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List contacts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.freeagent.com/v2/contacts",
+            "params": [
+              {
+                "name": "view",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "sort",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "updated_since",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List contacts"
+        },
+        {
+          "info": {
+            "name": "Create contact",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.freeagent.com/v2/contacts"
+          },
+          "docs": "Create contact"
+        },
+        {
+          "info": {
+            "name": "Get contact",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.freeagent.com/v2/contacts/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get contact"
+        },
+        {
+          "info": {
+            "name": "Update contact",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.freeagent.com/v2/contacts/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update contact"
+        },
+        {
+          "info": {
+            "name": "Delete contact",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.freeagent.com/v2/contacts/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete contact"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Invoices",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List invoices",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.freeagent.com/v2/invoices",
+            "params": [
+              {
+                "name": "view",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "contact",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "project",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "nested_invoice_items",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "updated_since",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "per_page",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List invoices"
+        },
+        {
+          "info": {
+            "name": "Create invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.freeagent.com/v2/invoices"
+          },
+          "docs": "Create invoice"
+        },
+        {
+          "info": {
+            "name": "Get invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.freeagent.com/v2/invoices/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get invoice"
+        },
+        {
+          "info": {
+            "name": "Update invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.freeagent.com/v2/invoices/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update invoice"
+        },
+        {
+          "info": {
+            "name": "Delete invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.freeagent.com/v2/invoices/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete invoice"
+        },
+        {
+          "info": {
+            "name": "Get invoice as PDF",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.freeagent.com/v2/invoices/:id/pdf",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get invoice as PDF"
+        },
+        {
+          "info": {
+            "name": "Mark invoice as sent",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.freeagent.com/v2/invoices/:id/transitions/mark_as_sent",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Mark invoice as sent"
+        },
+        {
+          "info": {
+            "name": "Schedule invoice for sending",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.freeagent.com/v2/invoices/:id/transitions/mark_as_scheduled",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Schedule invoice for sending"
+        },
+        {
+          "info": {
+            "name": "Revert invoice to draft",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.freeagent.com/v2/invoices/:id/transitions/mark_as_draft",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Revert invoice to draft"
+        },
+        {
+          "info": {
+            "name": "Cancel invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.freeagent.com/v2/invoices/:id/transitions/mark_as_cancelled",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Cancel invoice"
+        },
+        {
+          "info": {
+            "name": "Duplicate invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.freeagent.com/v2/invoices/:id/duplicate",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Duplicate invoice"
+        },
+        {
+          "info": {
+            "name": "Email invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.freeagent.com/v2/invoices/:id/send_email",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Email invoice"
+        },
+        {
+          "info": {
+            "name": "Invoice activity timeline",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.freeagent.com/v2/invoices/timeline"
+          },
+          "docs": "Invoice activity timeline"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "BankAccounts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List bank accounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.freeagent.com/v2/bank_accounts",
+            "params": [
+              {
+                "name": "view",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List bank accounts"
+        },
+        {
+          "info": {
+            "name": "Create bank account",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.freeagent.com/v2/bank_accounts"
+          },
+          "docs": "Create bank account"
+        },
+        {
+          "info": {
+            "name": "Get bank account",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.freeagent.com/v2/bank_accounts/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get bank account"
+        },
+        {
+          "info": {
+            "name": "Update bank account",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.freeagent.com/v2/bank_accounts/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update bank account"
+        },
+        {
+          "info": {
+            "name": "Delete bank account",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.freeagent.com/v2/bank_accounts/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete bank account"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
