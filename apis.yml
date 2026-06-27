@@ -54,7 +54,7 @@ apis:
         url: https://dev.freeagent.com/docs/quick_start
       - type: Sandbox
         url: https://api.sandbox.freeagent.com
-      - type: Postman Collection
+      - type: PostmanCollection
         url: https://github.com/fac/postman-freeagent-api-collection
 
 common:
@@ -64,11 +64,11 @@ common:
     url: https://www.freeagent.com
   - type: Documentation
     url: https://dev.freeagent.com/docs
-  - type: Developer Portal
+  - type: DeveloperPortal
     url: https://dev.freeagent.com
   - type: Pricing
     url: https://www.freeagent.com/pricing/
-  - type: SignUp
+  - type: Signup
     url: https://signup.freeagent.com/
   - type: Support
     url: https://support.freeagent.com
