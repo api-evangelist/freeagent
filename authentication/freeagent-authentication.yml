@@ -1,0 +1,21 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/freeagent-openapi.yml
+summary:
+  types:
+  - oauth2
+  oauth2_flows:
+  - authorizationCode
+schemes:
+- name: oauth2
+  type: oauth2
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.freeagent.com/v2/approve_app
+    tokenUrl: https://api.freeagent.com/v2/token_endpoint
+    scopes: 0
+  description: |-
+    OAuth 2.0 authorization code flow. Access tokens valid for ~1 hour;
+    refresh tokens used to obtain new access tokens.
+  sources:
+  - openapi/freeagent-openapi.yml

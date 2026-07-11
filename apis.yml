@@ -58,6 +58,12 @@ apis:
         url: https://github.com/fac/postman-freeagent-api-collection
 
 common:
+  - type: VulnerabilityDisclosure
+    url: security/freeagent-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/freeagent-domain-security.yml
+  - type: Authentication
+    url: authentication/freeagent-authentication.yml
   - type: OAuthScopes
     url: scopes/freeagent-scopes.yml
   - type: LinkedIn
