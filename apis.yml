@@ -58,6 +58,8 @@ apis:
         url: https://github.com/fac/postman-freeagent-api-collection
 
 common:
+  - type: OAuthScopes
+    url: scopes/freeagent-scopes.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/freeagent
   - type: Website
@@ -74,6 +76,8 @@ common:
     url: https://support.freeagent.com
   - type: StatusPage
     url: https://status.freeagent.com
+  - url: https://www.freeagent.com/feed.rss
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
