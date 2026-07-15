@@ -58,6 +58,8 @@ apis:
         url: https://github.com/fac/postman-freeagent-api-collection
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/freeagent-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/freeagent-vulnerability-disclosure.yml
   - type: DomainSecurity
