@@ -1,0 +1,104 @@
+openapi: 3.1.0
+info:
+  title: FreeAgent BankAccounts API
+  description: 'FreeAgent is UK-focused cloud accounting software. The API is RESTful and
+
+    exposes contacts, invoices, bank accounts, projects, expenses, bills,
+
+    timeslips, tax timeline, and more. OAuth 2.0 (authorization code) is
+
+    required for access. JSON and XML responses are supported.
+
+
+    Sandbox base URL: https://api.sandbox.freeagent.com
+
+    '
+  version: '2'
+  contact:
+    name: FreeAgent API Support
+    url: https://dev.freeagent.com/
+servers:
+- url: https://api.freeagent.com/v2
+  description: Production
+- url: https://api.sandbox.freeagent.com/v2
+  description: Sandbox
+security:
+- oauth2: []
+tags:
+- name: BankAccounts
+paths:
+  /bank_accounts:
+    get:
+      summary: List bank accounts
+      operationId: listBankAccounts
+      tags:
+      - BankAccounts
+      parameters:
+      - name: view
+        in: query
+        schema:
+          type: string
+          enum:
+          - standard_bank_accounts
+          - credit_card_accounts
+          - paypal_accounts
+      responses:
+        '200':
+          description: Bank accounts.
+    post:
+      summary: Create bank account
+      operationId: createBankAccount
+      tags:
+      - BankAccounts
+      responses:
+        '201':
+          description: Created.
+  /bank_accounts/{id}:
+    parameters:
+    - $ref: '#/components/parameters/id'
+    get:
+      summary: Get bank account
+      operationId: getBankAccount
+      tags:
+      - BankAccounts
+      responses:
+        '200':
+          description: Bank account.
+    put:
+      summary: Update bank account
+      operationId: updateBankAccount
+      tags:
+      - BankAccounts
+      responses:
+        '200':
+          description: Updated.
+    delete:
+      summary: Delete bank account
+      operationId: deleteBankAccount
+      tags:
+      - BankAccounts
+      responses:
+        '204':
+          description: Deleted.
+components:
+  parameters:
+    id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      description: 'OAuth 2.0 authorization code flow. Access tokens valid for ~1 hour;
+
+        refresh tokens used to obtain new access tokens.
+
+        '
+      flows:
+        authorizationCode:
+          authorizationUrl: https://api.freeagent.com/v2/approve_app
+          tokenUrl: https://api.freeagent.com/v2/token_endpoint
+          refreshUrl: https://api.freeagent.com/v2/token_endpoint
+          scopes: {}
