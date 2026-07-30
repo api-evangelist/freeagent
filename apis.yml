@@ -11,7 +11,19 @@ description: >-
   practices. Authentication uses OAuth 2.0 (authorization code flow) and
   responses are available in JSON or XML.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/freeagent.png
 tags:
   - Accounting
   - Small Business
@@ -28,35 +40,62 @@ created: '2026-05-11'
 modified: '2026-05-11'
 specificationVersion: '0.19'
 apis:
-  - aid: freeagent:rest-api
-    name: FreeAgent REST API
-    description: >-
-      RESTful API for the FreeAgent cloud accounting platform. Provides full
-      access to invoices, estimates, contacts, bills, expenses, projects,
-      timeslips, bank accounts, transactions, and accountancy-practice
-      resources. Authentication is OAuth 2.0 authorization code flow; a
-      sandbox is available at api.sandbox.freeagent.com.
-    humanURL: https://dev.freeagent.com/docs
-    baseURL: https://api.freeagent.com/v2
-    tags:
-      - Accounting
-      - Invoicing
-      - Bookkeeping
-      - Expenses
-      - Bank Feeds
-      - OAuth 2.0
-    properties:
-      - type: Documentation
-        url: https://dev.freeagent.com/docs
-      - type: Authentication
-        url: https://dev.freeagent.com/docs/oauth
-      - type: GettingStarted
-        url: https://dev.freeagent.com/docs/quick_start
-      - type: Sandbox
-        url: https://api.sandbox.freeagent.com
-      - type: PostmanCollection
-        url: https://github.com/fac/postman-freeagent-api-collection
-
+- aid: freeagent:rest-api
+  name: FreeAgent REST API
+  description: >-
+    RESTful API for the FreeAgent cloud accounting platform. Provides full access to invoices, estimates,
+    contacts, bills, expenses, projects, timeslips, bank accounts, transactions, and accountancy-practice
+    resources. Authentication is OAuth 2.0 authorization code flow; a sandbox is available at api.sandbox.freeagent.com.
+  humanURL: https://dev.freeagent.com/docs
+  baseURL: https://api.freeagent.com/v2
+  tags:
+  - Accounting
+  - Invoicing
+  - Bookkeeping
+  - Expenses
+  - Bank Feeds
+  - OAuth 2.0
+  properties:
+  - type: Documentation
+    url: https://dev.freeagent.com/docs
+  - type: Authentication
+    url: https://dev.freeagent.com/docs/oauth
+  - type: GettingStarted
+    url: https://dev.freeagent.com/docs/quick_start
+  - type: Sandbox
+    url: https://api.sandbox.freeagent.com
+  - type: PostmanCollection
+    url: https://github.com/fac/postman-freeagent-api-collection
+- aid: freeagent:freeagent-bankaccounts-api
+  name: FreeAgent BankAccounts API
+  description: The BankAccounts API from FreeAgent — 2 operation(s) for bankaccounts.
+  humanURL: https://dev.freeagent.com/docs
+  baseURL: https://api.freeagent.com/v2
+  tags:
+  - BankAccounts
+  properties:
+  - type: OpenAPI
+    url: openapi/freeagent-bankaccounts-api-openapi.yml
+- aid: freeagent:freeagent-contacts-api
+  name: FreeAgent Contacts API
+  description: The Contacts API from FreeAgent — 2 operation(s) for contacts.
+  humanURL: https://dev.freeagent.com/docs
+  baseURL: https://api.freeagent.com/v2
+  tags:
+  - Contacts
+  properties:
+  - type: OpenAPI
+    url: openapi/freeagent-contacts-api-openapi.yml
+- aid: freeagent:freeagent-invoices-api
+  name: FreeAgent Invoices API
+  description: The Invoices API from FreeAgent — 10 operation(s) for invoices.
+  humanURL: https://dev.freeagent.com/docs
+  baseURL: https://api.freeagent.com/v2
+  tags:
+  - Invoices
+  properties:
+  - type: OpenAPI
+    url: openapi/freeagent-invoices-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/freeagent-agentic-access.yml
