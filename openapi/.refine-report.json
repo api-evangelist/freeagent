@@ -1,0 +1,18 @@
+{
+  "provider": "freeagent",
+  "sources": [
+    "freeagent-bankaccounts-api-openapi.yml",
+    "freeagent-contacts-api-openapi.yml",
+    "freeagent-invoices-api-openapi.yml"
+  ],
+  "outputs": [
+    "freeagent-bankaccounts-api-openapi.yml",
+    "freeagent-contacts-api-openapi.yml",
+    "freeagent-invoices-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

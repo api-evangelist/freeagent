@@ -1,0 +1,266 @@
+openapi: 3.1.0
+info:
+  title: FreeAgent API
+  description: |
+    FreeAgent is UK-focused cloud accounting software. The API is RESTful and
+    exposes contacts, invoices, bank accounts, projects, expenses, bills,
+    timeslips, tax timeline, and more. OAuth 2.0 (authorization code) is
+    required for access. JSON and XML responses are supported.
+
+    Sandbox base URL: https://api.sandbox.freeagent.com
+  version: "2"
+  contact:
+    name: FreeAgent API Support
+    url: https://dev.freeagent.com/
+servers:
+  - url: https://api.freeagent.com/v2
+    description: Production
+  - url: https://api.sandbox.freeagent.com/v2
+    description: Sandbox
+security:
+  - oauth2: []
+paths:
+  /contacts:
+    get:
+      summary: List contacts
+      operationId: listContacts
+      tags: [Contacts]
+      parameters:
+        - name: view
+          in: query
+          schema:
+            type: string
+            enum: [active, all, clients, suppliers]
+        - name: sort
+          in: query
+          schema:
+            type: string
+            enum: [name, created_at, updated_at, -name, -created_at, -updated_at]
+        - name: updated_since
+          in: query
+          schema: { type: string, format: date-time }
+        - $ref: '#/components/parameters/page'
+        - $ref: '#/components/parameters/per_page'
+      responses:
+        "200": { description: Contacts list. }
+    post:
+      summary: Create contact
+      operationId: createContact
+      tags: [Contacts]
+      responses:
+        "201": { description: Contact created. }
+  /contacts/{id}:
+    parameters:
+      - $ref: '#/components/parameters/id'
+    get:
+      summary: Get contact
+      operationId: getContact
+      tags: [Contacts]
+      responses:
+        "200": { description: Contact. }
+    put:
+      summary: Update contact
+      operationId: updateContact
+      tags: [Contacts]
+      responses:
+        "200": { description: Updated. }
+    delete:
+      summary: Delete contact
+      operationId: deleteContact
+      tags: [Contacts]
+      responses:
+        "204": { description: Deleted. }
+  /invoices:
+    get:
+      summary: List invoices
+      operationId: listInvoices
+      tags: [Invoices]
+      parameters:
+        - name: view
+          in: query
+          schema:
+            type: string
+            enum: [all, recent_open_or_overdue, open, overdue, draft, paid]
+        - name: contact
+          in: query
+          schema: { type: string, format: uri }
+        - name: project
+          in: query
+          schema: { type: string, format: uri }
+        - name: nested_invoice_items
+          in: query
+          schema: { type: boolean }
+        - name: updated_since
+          in: query
+          schema: { type: string, format: date-time }
+        - $ref: '#/components/parameters/page'
+        - $ref: '#/components/parameters/per_page'
+      responses:
+        "200": { description: Invoices list. }
+    post:
+      summary: Create invoice
+      operationId: createInvoice
+      tags: [Invoices]
+      responses:
+        "201": { description: Invoice created. }
+  /invoices/{id}:
+    parameters:
+      - $ref: '#/components/parameters/id'
+    get:
+      summary: Get invoice
+      operationId: getInvoice
+      tags: [Invoices]
+      responses:
+        "200": { description: Invoice. }
+    put:
+      summary: Update invoice
+      operationId: updateInvoice
+      tags: [Invoices]
+      responses:
+        "200": { description: Updated. }
+    delete:
+      summary: Delete invoice
+      operationId: deleteInvoice
+      tags: [Invoices]
+      responses:
+        "204": { description: Deleted. }
+  /invoices/{id}/pdf:
+    parameters:
+      - $ref: '#/components/parameters/id'
+    get:
+      summary: Get invoice as PDF
+      operationId: getInvoicePdf
+      tags: [Invoices]
+      responses:
+        "200":
+          description: PDF document.
+          content:
+            application/pdf: {}
+  /invoices/{id}/transitions/mark_as_sent:
+    parameters:
+      - $ref: '#/components/parameters/id'
+    put:
+      summary: Mark invoice as sent
+      operationId: invoiceMarkAsSent
+      tags: [Invoices]
+      responses:
+        "200": { description: Status updated. }
+  /invoices/{id}/transitions/mark_as_scheduled:
+    parameters:
+      - $ref: '#/components/parameters/id'
+    put:
+      summary: Schedule invoice for sending
+      operationId: invoiceMarkAsScheduled
+      tags: [Invoices]
+      responses:
+        "200": { description: Status updated. }
+  /invoices/{id}/transitions/mark_as_draft:
+    parameters:
+      - $ref: '#/components/parameters/id'
+    put:
+      summary: Revert invoice to draft
+      operationId: invoiceMarkAsDraft
+      tags: [Invoices]
+      responses:
+        "200": { description: Status updated. }
+  /invoices/{id}/transitions/mark_as_cancelled:
+    parameters:
+      - $ref: '#/components/parameters/id'
+    put:
+      summary: Cancel invoice
+      operationId: invoiceMarkAsCancelled
+      tags: [Invoices]
+      responses:
+        "200": { description: Status updated. }
+  /invoices/{id}/duplicate:
+    parameters:
+      - $ref: '#/components/parameters/id'
+    post:
+      summary: Duplicate invoice
+      operationId: duplicateInvoice
+      tags: [Invoices]
+      responses:
+        "201": { description: Duplicate created. }
+  /invoices/{id}/send_email:
+    parameters:
+      - $ref: '#/components/parameters/id'
+    post:
+      summary: Email invoice
+      operationId: emailInvoice
+      tags: [Invoices]
+      responses:
+        "200": { description: Email queued. }
+  /invoices/timeline:
+    get:
+      summary: Invoice activity timeline
+      operationId: invoicesTimeline
+      tags: [Invoices]
+      responses:
+        "200": { description: Timeline. }
+  /bank_accounts:
+    get:
+      summary: List bank accounts
+      operationId: listBankAccounts
+      tags: [BankAccounts]
+      parameters:
+        - name: view
+          in: query
+          schema:
+            type: string
+            enum: [standard_bank_accounts, credit_card_accounts, paypal_accounts]
+      responses:
+        "200": { description: Bank accounts. }
+    post:
+      summary: Create bank account
+      operationId: createBankAccount
+      tags: [BankAccounts]
+      responses:
+        "201": { description: Created. }
+  /bank_accounts/{id}:
+    parameters:
+      - $ref: '#/components/parameters/id'
+    get:
+      summary: Get bank account
+      operationId: getBankAccount
+      tags: [BankAccounts]
+      responses:
+        "200": { description: Bank account. }
+    put:
+      summary: Update bank account
+      operationId: updateBankAccount
+      tags: [BankAccounts]
+      responses:
+        "200": { description: Updated. }
+    delete:
+      summary: Delete bank account
+      operationId: deleteBankAccount
+      tags: [BankAccounts]
+      responses:
+        "204": { description: Deleted. }
+components:
+  parameters:
+    id:
+      name: id
+      in: path
+      required: true
+      schema: { type: string }
+    page:
+      name: page
+      in: query
+      schema: { type: integer, minimum: 1 }
+    per_page:
+      name: per_page
+      in: query
+      schema: { type: integer, minimum: 1, maximum: 100 }
+  securitySchemes:
+    oauth2:
+      type: oauth2
+      description: |
+        OAuth 2.0 authorization code flow. Access tokens valid for ~1 hour;
+        refresh tokens used to obtain new access tokens.
+      flows:
+        authorizationCode:
+          authorizationUrl: https://api.freeagent.com/v2/approve_app
+          tokenUrl: https://api.freeagent.com/v2/token_endpoint
+          refreshUrl: https://api.freeagent.com/v2/token_endpoint
+          scopes: {}
