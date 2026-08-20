@@ -54,6 +54,13 @@ apis:
   - Bookkeeping
   - Expenses
   - Bank Feeds
+  - Authentication
+  tags_raw:
+  - Accounting
+  - Invoicing
+  - Bookkeeping
+  - Expenses
+  - Bank Feeds
   - OAuth 2.0
   properties:
   - type: Documentation
@@ -72,6 +79,8 @@ apis:
   humanURL: https://dev.freeagent.com/docs
   baseURL: https://api.freeagent.com/v2
   tags:
+  - Bank Accounts
+  tags_raw:
   - BankAccounts
   properties:
   - type: OpenAPI
