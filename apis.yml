@@ -91,7 +91,7 @@ apis:
   humanURL: https://dev.freeagent.com/docs
   baseURL: https://api.freeagent.com/v2
   tags:
-  - BankAccounts
+  - Bank Accounts
   tags_raw:
   - BankAccounts
   properties:
