@@ -85,18 +85,6 @@ apis:
     url: https://api.sandbox.freeagent.com
   - type: PostmanCollection
     url: https://github.com/fac/postman-freeagent-api-collection
-- aid: freeagent:freeagent-bankaccounts-api
-  name: FreeAgent BankAccounts API
-  description: The BankAccounts API from FreeAgent — 2 operation(s) for bankaccounts.
-  humanURL: https://dev.freeagent.com/docs
-  baseURL: https://api.freeagent.com/v2
-  tags:
-  - Bank Accounts
-  tags_raw:
-  - BankAccounts
-  properties:
-  - type: OpenAPI
-    url: openapi/freeagent-bankaccounts-api-openapi.yml
 - aid: freeagent:freeagent-contacts-api
   name: FreeAgent Contacts API
   description: The Contacts API from FreeAgent — 2 operation(s) for contacts.
@@ -117,6 +105,16 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/freeagent-invoices-api-openapi.yml
+- aid: freeagent:freeagent-bank-accounts-api
+  name: FreeAgent Bank Accounts API
+  description: The Bank Accounts API from FreeAgent — 2 operation(s) for bank accounts.
+  humanURL: https://dev.freeagent.com/docs
+  baseURL: https://api.freeagent.com/v2
+  tags:
+  - Bank Accounts
+  properties:
+  - type: OpenAPI
+    url: openapi/freeagent-bank-accounts-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/freeagent-agentic-access.yml
