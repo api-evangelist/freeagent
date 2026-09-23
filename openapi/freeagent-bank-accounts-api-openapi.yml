@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: FreeAgent BankAccounts API
+  title: FreeAgent Bank Accounts API
   description: 'FreeAgent is UK-focused cloud accounting software. The API is RESTful and
 
     exposes contacts, invoices, bank accounts, projects, expenses, bills,
@@ -10,9 +10,7 @@ info:
     required for access. JSON and XML responses are supported.
 
 
-    Sandbox base URL: https://api.sandbox.freeagent.com
-
-    '
+    Sandbox base URL: https://api.sandbox.freeagent.com'
   version: '2'
   contact:
     name: FreeAgent API Support
@@ -25,14 +23,14 @@ servers:
 security:
 - oauth2: []
 tags:
-- name: BankAccounts
+- name: Bank Accounts
 paths:
   /bank_accounts:
     get:
       summary: List bank accounts
       operationId: listBankAccounts
       tags:
-      - BankAccounts
+      - Bank Accounts
       parameters:
       - name: view
         in: query
@@ -49,7 +47,7 @@ paths:
       summary: Create bank account
       operationId: createBankAccount
       tags:
-      - BankAccounts
+      - Bank Accounts
       responses:
         '201':
           description: Created.
@@ -60,7 +58,7 @@ paths:
       summary: Get bank account
       operationId: getBankAccount
       tags:
-      - BankAccounts
+      - Bank Accounts
       responses:
         '200':
           description: Bank account.
@@ -68,7 +66,7 @@ paths:
       summary: Update bank account
       operationId: updateBankAccount
       tags:
-      - BankAccounts
+      - Bank Accounts
       responses:
         '200':
           description: Updated.
@@ -76,7 +74,7 @@ paths:
       summary: Delete bank account
       operationId: deleteBankAccount
       tags:
-      - BankAccounts
+      - Bank Accounts
       responses:
         '204':
           description: Deleted.

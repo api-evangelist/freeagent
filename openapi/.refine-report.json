@@ -1,18 +1,30 @@
 {
   "provider": "freeagent",
   "sources": [
-    "freeagent-bankaccounts-api-openapi.yml",
-    "freeagent-contacts-api-openapi.yml",
-    "freeagent-invoices-api-openapi.yml"
+    "_original/freeagent-openapi.yml"
   ],
   "outputs": [
     "freeagent-bankaccounts-api-openapi.yml",
     "freeagent-contacts-api-openapi.yml",
     "freeagent-invoices-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "deleted 1 superseded output(s) from the previous generation"
+  ],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "freeagent-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "freeagent-openapi.yml: declared missing tag: BankAccounts",
+    "freeagent-openapi.yml: declared missing tag: Contacts",
+    "freeagent-openapi.yml: declared missing tag: Invoices",
+    "superseded outputs removed: freeagent-bank-accounts-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 4 total)"
+  ],
+  "skipped": [
+    "freeagent-bank-accounts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "freeagent-contacts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "freeagent-invoices-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
