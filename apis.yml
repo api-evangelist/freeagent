@@ -116,6 +116,9 @@ apis:
   - type: OpenAPI
     url: openapi/freeagent-bank-accounts-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/freeagent-capability-edges.yml
+    name: FreeAgent Business Capability Map
   - type: AgenticAccess
     url: agentic-access/freeagent-agentic-access.yml
   - type: VulnerabilityDisclosure
