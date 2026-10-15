@@ -1,16 +1,28 @@
-generated: '2026-07-11'
-method: derived
-source: openapi/freeagent-openapi.yml
-docs: https://dev.freeagent.com/docs/oauth
-note: >-
-  FreeAgent's OAuth 2.0 authorization code flow does not use or document OAuth
-  scopes; API access is instead limited by the authorizing FreeAgent user's
-  numeric permission level (0 No Access through 8 Full), with a minimum
-  required access level specified per resource
-  (https://dev.freeagent.com/docs/introduction).
+generated: '2026-10-14'
+method: none
+source: openapi/freeagent-bank-accounts-api-openapi.yml, openapi/freeagent-contacts-api-openapi.yml,
+  openapi/freeagent-invoices-api-openapi.yml
 schemes:
 - name: oauth2
-  source: openapi/freeagent-openapi.yml
+  source: openapi/freeagent-bank-accounts-api-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.freeagent.com/v2/approve_app
+    tokenUrl: https://api.freeagent.com/v2/token_endpoint
+  description: |-
+    OAuth 2.0 authorization code flow. Access tokens valid for ~1 hour;
+    refresh tokens used to obtain new access tokens.
+- name: oauth2
+  source: openapi/freeagent-contacts-api-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.freeagent.com/v2/approve_app
+    tokenUrl: https://api.freeagent.com/v2/token_endpoint
+  description: |-
+    OAuth 2.0 authorization code flow. Access tokens valid for ~1 hour;
+    refresh tokens used to obtain new access tokens.
+- name: oauth2
+  source: openapi/freeagent-invoices-api-openapi.yml
   flows:
   - flow: authorizationCode
     authorizationUrl: https://api.freeagent.com/v2/approve_app
@@ -19,3 +31,5 @@ schemes:
     OAuth 2.0 authorization code flow. Access tokens valid for ~1 hour;
     refresh tokens used to obtain new access tokens.
 scopes: []
+note: The OAuth2 security scheme(s) in the OpenAPI declare no scopes, and no security requirement
+  references one.
