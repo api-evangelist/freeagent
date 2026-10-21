@@ -104,3 +104,15 @@
     builder: Pipedream repo (component)
   status: not-a-workflow
   arazzo: null
+- slug: freeagent-amazon-selling-partner-appstore
+  label: Amazon Selling Partner Appstore
+  partner: amazon-seller-central
+  partner_name: Amazon Selling Partner Appstore
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://sellercentral.amazon.com/selling-partner-appstore/dp/amzn1.sp.solution.2fbf2bc1-f838-41d1-add4-b2066efc9d3e
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
