@@ -1,4 +1,4 @@
-# FreeAgent (freeagent)
+# FreeAgent
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,69 +66,112 @@
 
 FreeAgent is UK-focused cloud accounting software for small businesses, freelancers, and accountants, providing invoicing, expense tracking, time tracking, project management, banking, payroll, and Self Assessment / VAT filing through HMRC's Making Tax Digital. The FreeAgent API is a RESTful service that exposes contacts, invoices, estimates, expenses, bills, timeslips, projects, bank accounts, bank transactions, transaction explanations, and tax timeline events for company accounts and accountancy practices. Authentication uses OAuth 2.0 (authorization code flow) and responses are available in JSON or XML.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/freeagent/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/freeagent/refs/heads/main/apis.yml)
+**Areas:** Accounting · Small Business · Invoicing · Bookkeeping · Expenses · Payroll · VAT · HMRC · Making Tax Digital
 
-## Scope
+## FreeAgent on APIs.io
 
-- **Type:** Index
+Everything profiled for FreeAgent is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/freeagent/](https://apis.io/providers/freeagent/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (4)
 
-- Accounting
-- Small Business
-- Invoicing
-- Bookkeeping
-- Expenses
-- Payroll
-- VAT
-- HMRC
-- Making Tax Digital
+- [FreeAgent REST API](https://apis.io/apis/freeagent/rest-api/) — RESTful API for the FreeAgent cloud accounting platform. Provides full access to invoices, estimates, contacts, bills, expenses, projects, timeslips, bank…
+- [FreeAgent Contacts API](https://apis.io/apis/freeagent/freeagent-contacts-api/) — The Contacts API from FreeAgent — 2 operation(s) for contacts.
+- [FreeAgent Invoices API](https://apis.io/apis/freeagent/freeagent-invoices-api/) — The Invoices API from FreeAgent — 10 operation(s) for invoices.
+- [FreeAgent Bank Accounts API](https://apis.io/apis/freeagent/freeagent-bank-accounts-api/) — The Bank Accounts API from FreeAgent — 2 operation(s) for bank accounts.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-11
-- **Modified:** 2026-05-11
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### FreeAgent REST API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-RESTful API for the FreeAgent cloud accounting platform. Provides full access to invoices, estimates, contacts, bills, expenses, projects, timeslips, bank accounts, transactions, and accountancy-practice resources. Authentication is OAuth 2.0 authorization code flow; a sandbox is available at api.sandbox.freeagent.com.
+- [Freeagent Agentic Access](https://apis.io/agentic-access/freeagent/freeagent-agentic-access/)
 
-- **Human URL:** [https://dev.freeagent.com/docs](https://dev.freeagent.com/docs)
-- **Base URL:** `https://api.freeagent.com/v2`
+#### Collections (4)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Accounting
-- Invoicing
-- Bookkeeping
-- Expenses
-- Bank Feeds
-- OAuth 2.0
+- [FreeAgent API](https://apis.io/collections/freeagent/open-freeagent/)
+- [FreeAgent BankAccounts API](https://apis.io/collections/freeagent/open-freeagent-bankaccounts-api/)
+- [FreeAgent BankAccounts Contacts API](https://apis.io/collections/freeagent/open-freeagent-contacts-api/)
+- [FreeAgent BankAccounts Invoices API](https://apis.io/collections/freeagent/open-freeagent-invoices-api/)
 
-#### Properties
+#### Security (3)
 
-- [Documentation](https://dev.freeagent.com/docs)
-- [Authentication](https://dev.freeagent.com/docs/oauth)
-- [Getting Started](https://dev.freeagent.com/docs/quick_start)
-- [Sandbox](https://api.sandbox.freeagent.com)
-- [Postman  Collection](https://github.com/fac/postman-freeagent-api-collection)
-- [Postman Collection](collections/freeagent.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/freeagent.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Freeagent Authentication](https://apis.io/security/freeagent/freeagent-authentication/)
+- [Freeagent Domain Security](https://apis.io/security/freeagent/freeagent-domain-security/)
+- [Freeagent Vulnerability Disclosure](https://apis.io/security/freeagent/freeagent-vulnerability-disclosure/)
 
-- [LinkedIn](https://www.linkedin.com/company/freeagent)
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Freeagent Scopes](https://apis.io/scopes/freeagent/freeagent-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.freeagent.com)
 - [Documentation](https://dev.freeagent.com/docs)
-- [Developer  Portal](https://dev.freeagent.com)
 - [Pricing](https://www.freeagent.com/pricing/)
-- [Sign Up](https://signup.freeagent.com/)
 - [Support](https://support.freeagent.com)
-- [Status Page](https://status.freeagent.com)
+- [Blog](https://www.freeagent.com/feed.rss)
+- [Status](https://status.freeagent.com)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 38.0** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 46.3 |
+| Contract governance | 0.0 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 61.9 |
+| Access clarity | 23.7 |
+
+**Agent readiness 24.0** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 27.5** — Employment & Payroll
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/freeagent/](https://apis.io/providers/freeagent/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for FreeAgent: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/freeagent/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
